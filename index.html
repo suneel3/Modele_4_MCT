@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MultiSearch Engine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="images.css">
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="sidebar ">
+        <div class="top">
+          <span class="material-symbols-outlined menu"> menu</span>
+          <div class="new-chat ">
+            <span class="material-symbols-outlined">add</span>
+            <p>New Chat</p>
+          </div>
+          <div class="recent ">
+            <p class="recent-title">Recent</p>
+
+            <div class="recent-container ">
+              <div class="recent-entry ">
+                <span class="material-symbols-outlined">mode_comment</span>
+                <p>what is react ...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="bottom-item recent-entry ">
+            <span class="material-symbols-outlined">help </span>
+            <p>Help</p>
+          </div>
+          <div class="bottom-item recent-entry ">
+            <span class="material-symbols-outlined">history </span>
+            <p>Activity</p>
+          </div>
+          <div class="bottom-item recent-entry ">
+            <span class="material-symbols-outlined">settings </span>
+            <p>Settings</p>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="nav">
+          <p>MultiSearch</p>
+          <img src="assets/profile.webp" alt="" />
+        </div>
+        <div class="main-container">
+          <div class="greet">
+            <p><span class="role"></span></p>
+            <p>How can I help you today</p>
+          </div>
+          <div class="cards">
+            <div class="card ">
+              <p>Suggest beautiful places to see on an upcoming road trip</p>
+              <img src="assets/compass_icon.png" alt="" />
+            </div>
+            <div class="card ">
+              <p>Briefly summarize this concept: urban planning</p>
+              <img src="assets/bulb_icon.png" alt="" />
+            </div>
+            <div class="card ">
+              <p>Brainstorm team bonding activities for our work retreat</p>
+              <img src="assets/code_icon.png" alt="" />
+            </div>
+            <div class="card ">
+              <p>Improve the readability of the following code</p>
+              <img src="assets/message_icon.png" />
+            </div>
+          </div>
+          <div? class="main-bottom">
+            <div class="search-box">
+              <input type="text" placeholder="Enter a prompt here" />
+              <div>
+                <img src="assets/gallery_icon.png" alt="" />
+                <img src="assets/mic_icon.png" alt="" id="mic" />
+                <img src="assets/send_icon.png" alt="" id="send" />
+              </div>
+            </div>
+        </div>
+          <div class="loader">
+            <hr />
+            <hr />
+            <hr />
+          </div>
+          <div class="button-container">
+            <button class="button selectedBtn" id="google">Google</button>
+            <button class="button" id="wiki">Wiki</button>
+            <button class="button" id="gemini">Gemini Ai</button>
+            <button class="button" id="images">Ai Images</button>
+          </div>
+          <div class="result-container ">
+          </div>
+          <p class="bottom-info">
+            Gemini may display inaccurate info, including about people, so double-check its responses. Your privacy and Gemini Apps
+                </p>
+        </div>
+      </div>
+    </div>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typeData = new Typed(".role", {
+        strings: [
+          "Hello , Developer",
+        ],
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 80,
+        backDelay: 1000,
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+    <script src="google.js"></script>
+    <script src="wiki.js"></script>  
+    <script src="gemini.js" type="module"></script>
+    <script src="image.js"></script>
+  </body>
+</html>
